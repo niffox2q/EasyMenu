@@ -21,35 +21,6 @@ map<string, string> phrases;
 
 string startMenu;
 
-// TODO
-// Плагин позволяет обычным юзерам создавать меню через конфиги, без полноценного воссоздания плагина
-// Плагин должен считывать каждый файл который находится в addons/configs/EasyMenu/menus, там должны находится меню в виде JSON
-// В конфиге должна находится настройка (открытия меню при входе игрока), туда можно будет записать только одно
-// Поддерка VIP[CORE] и Admin System чтобы иметь возможность открывать меню только для определнных лиц
-// Должен находится основной конфиг по пути addons/configs/EasyMenu
-// Структура MenuData должна хранить в себе - название string name, string title, vector<MenuItem> items
-// Структура MenuItem должна хранить в себе - string text, string szBack(callback), bool isDisabled?
-// "Menu"
-// {
-//     "OpenCommand"	"!examplemenu1"
-//     "AdminAccess"	"@admin/root"
-//     "VipAccess"		"owner"
-//
-//     "Title"		"Пример заголовка меню"
-//
-//     "Item"
-//     {
-//         "Text"	"Кнопка №1"
-//         "Command"	"say Привет!"
-//         "disabled"	"false"
-//     }
-// }
-//
-//
-// "Config"
-// {
-//     "JoinMenu" "examplemenu1"
-// }
 
 CGameEntitySystem* GameEntitySystem()
 {
@@ -267,4 +238,4 @@ const char* EasyMenu::GetLicense() { return "Free"; }
 const char* EasyMenu::GetLogTag() { return "Easy Menu"; }
 const char* EasyMenu::GetName() { return "Easy Menu"; }
 const char* EasyMenu::GetURL() { return ""; }
-const char* EasyMenu::GetVersion() { return "1.0.0"; }
+const char* EasyMenu::GetVersion() { return "1.0.1"; }

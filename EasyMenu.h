@@ -13,7 +13,7 @@
 #include <random>
 #include <functional>
 #include <utlstring.h>
-#include <KeyValues.h>
+#include <keyvalues.h>
 #include "CCSPlayerController.h"
 #include <ctime>
 #include "time.h"

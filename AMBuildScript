@@ -59,12 +59,12 @@ class MMSPluginConfig(object):
     if builder.options.plugin_name is not None:
       self.plugin_name = builder.options.plugin_name
     else:
-      self.plugin_name = 'EasyMenu'
+      self.plugin_name = 'easymenu'
 
     if builder.options.plugin_alias is not None:
       self.plugin_alias = builder.options.plugin_alias
     else:
-      self.plugin_alias = 'EasyMenu'
+      self.plugin_alias = 'easymenu'
 
     if builder.options.targets:
       target_archs = builder.options.targets.split(',')
@@ -122,6 +122,9 @@ class MMSPluginConfig(object):
         '_vsnprintf=vsnprintf',
         'HAVE_STDINT_H',
         'GNUC',
+        'bswap_64=__bswap_64',
+        'bswap_32=__bswap_32',
+        'bswap_16=__bswap_16',
       ]
       cxx.cflags += [
         '-pipe',
@@ -132,9 +135,12 @@ class MMSPluginConfig(object):
         '-Wno-parentheses',
         '-Wno-unused',
         '-Wno-switch',
+        '-Wno-invalid-offsetof',
         '-msse',
         '-fPIC',
-        '-frtti'
+        '-finput-charset=UTF-8',  
+        '-fexec-charset=UTF-8', 
+        '-frtti',
       ]
 
       cxx.cxxflags += ['-std=c++17']
